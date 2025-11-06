@@ -242,7 +242,9 @@ begin
       continue;
     if CharInSet(AValue[i],['0'..'9']) then
       continue;
-    if CharInSet(AValue[i],['/', '?', ':', '(', ')', '.', ',', '''', '+', '-', ' ']) then
+    if CharInSet(AValue[i],['/', '?', ':', '(', ')', '.', ',', '''', '+', '-', ' ', '*', '$', '%']) then
+      continue;
+    if CharInSet(AValue[i],['Ä', 'ä', 'Ö', 'ö', 'Ü', 'ü', 'ß', '&']) then
       continue;
     Result := false;
     break;
